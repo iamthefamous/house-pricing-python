@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+env/
+.venv/
+*.db
+data/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+env/
+.venv/
+*.db
+data/
