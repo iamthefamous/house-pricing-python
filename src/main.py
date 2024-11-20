@@ -1,29 +1,60 @@
-from data.load_data import load_coefficients
-from core.house_analyzer import HouseAnalyzer
-from models.house import House
+from analyzer import HousePriceAnalyzer
+from models import PrivateHouse, Apartment
+
+
+def get_private_house_input():
+    """Gather input for a private house."""
+    print("\n--- Enter Private House Details ---")
+    area = float(input("Enter the house area (sqm): "))
+    location = input("Enter the location (center/suburbs): ").lower()
+    garden_area = float(input("Enter the garden area (sqm): "))
+    garage = input("Does it have a garage? (yes/no): ").strip().lower() == "yes"
+    num_floors = int(input("Enter the number of floors: "))
+    return PrivateHouse(area, location, garden_area, garage, num_floors)
+
+
+def get_apartment_input():
+    """Gather input for an apartment."""
+    print("\n--- Enter Apartment Details ---")
+    area = float(input("Enter the apartment area (sqm): "))
+    location = input("Enter the location (center/suburbs): ").lower()
+    floor = int(input("Enter the apartment's floor: "))
+    total_floors = int(input("Enter the total number of floors: "))
+    return Apartment(area, location, floor, total_floors)
+
 
 def main():
-    coefficients = load_coefficients()
-    analyzer = HouseAnalyzer(coefficients)
+    """Main function to run the House Pricing Analyzer."""
+    print("Welcome to the Bishkek House Pricing Analyzer!")
+    analyzer = HousePriceAnalyzer()
 
-    # Example inputs
-    property_type = input("Enter property type (private_house/apartments): ").strip()
-    location = input("Enter location (downtown/suburb/outskirts): ").strip()
-    area = float(input("Enter area in square meters: "))
-    rooms = int(input("Enter number of rooms: "))
-    construction_year = int(input("Enter construction year: "))
+    while True:
+        # Ask for property type
+        property_type = input("\nEnter property type (private_house/apartment): ").strip().lower()
 
-    additional_features = {}
-    if property_type == "private_house":
-        additional_features["yard"] = bool(int(input("Does it have a yard? (1 for Yes, 0 for No): ")))
-        additional_features["garage"] = bool(int(input("Does it have a garage? (1 for Yes, 0 for No): ")))
-    elif property_type == "apartments":
-        additional_features["floor"] = input("Enter floor level (low/mid/high): ").strip()
-        additional_features["elevator"] = bool(int(input("Does it have an elevator? (1 for Yes, 0 for No): ")))
+        # Get user input for the selected property type
+        if property_type == "private_house":
+            property_obj = get_private_house_input()
+        elif property_type == "apartment":
+            property_obj = get_apartment_input()
+        else:
+            print("Invalid property type! Please enter 'private_house' or 'apartment'.")
+            continue
 
-    house = House(property_type, location, area, rooms, construction_year, **additional_features)
-    price = analyzer.calculate_price(house)
-    print(f"Estimated price for the {property_type}: {price:.2f} USD")
+        # Calculate and display the price
+        try:
+            price = analyzer.calculate_price(property_obj)
+            print(f"\nThe estimated price for the {property_type} is: ${price:,.2f}\n")
+        except KeyError as e:
+            print(f"Error in calculation: {e}")
+
+        # Check if the user wants to continue
+        more = input("Do you want to calculate another property? (yes/no): ").strip().lower()
+        if more != "yes":
+            break
+
+    print("Thank you for using the Bishkek House Pricing Analyzer!")
+
 
 if __name__ == "__main__":
     main()

@@ -1,18 +1,16 @@
 # house-pricing-python
 The final project for 'introduction to programming with python course
 
-# TODO-LIST-CODE
-integrate the data base
-conclude what parametres will be included
-create House model and Analyzer class
+# done
+The project is alrady is finished
 
-# TODO-LIST-OTHER
-presentation
-create data base
+# TODO-LIST CODING & REASERCH
+1) adjust the coefficients
+2) add more locations
+3) add more coefficients
+4) adjust base price
 
-# TODO-LIST-СРОЧНО
-presentation
-minimun code
+
 
 
 
