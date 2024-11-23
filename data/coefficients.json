@@ -1,0 +1,25 @@
+{
+    "base_price": 50000,
+    "area_coefficient": 1000,
+    "garden_coefficient": 500,
+    "garage_price": 10000,
+    "floor_coefficient": 2000,
+    "location_coefficients": {
+        "center": 1.9,
+        "Kyrgyzia 1":1.8,
+        "Orto-sai village":1.674,
+        "Kok jar": 1.71,
+        "Archa Beshik": 1.56,
+        "Chon Aryk":1.512,
+        "Ala Archa":1.437,
+        "Tyngych":1.234,
+        "Altyn-Ordo":1.197,
+        "Ak-Ordo":1.217,
+        "Ak-Orgo":1.2074,
+        "Sverdlovskii":1,
+        "Pervomaiski":1,
+        "Lebidovka":1.1,
+        "Novopokrovka":1.07,
+        "Maevka":0
+    }
+}
