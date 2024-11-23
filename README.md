@@ -45,8 +45,7 @@ git clone https://github.com/iamthefamous/house-pricing-python.git
 cd house-pricing-python.git
 
 
-"""
-## Usage
+### Usage
 
 1. **Run the Program**:
    - Start the program by executing `main.py`.
@@ -72,28 +71,27 @@ cd house-pricing-python.git
 4. **Repeat or Exit**:
    - You can calculate another property or exit the program.
 
----
 
-## File Descriptions
+### File Descriptions
 
-### `main.py`
+#### `main.py`
 The main file that runs the Bishkek House Pricing Analyzer. Handles:
 - User input and interaction.
 - Validating location input.
 - Displaying the estimated price.
 
-### `analyzer.py`
+#### `analyzer.py`
 Contains the `HousePriceAnalyzer` class, which:
 - Reads pricing coefficients from the `coefficients.json` file.
 - Calculates property prices based on user inputs.
 
-### `models.py`
+#### `models.py`
 Defines the following classes:
 - `Property`: A base class containing shared attributes like area and location.
 - `PrivateHouse`: A class for houses, with attributes for garden size, number of floors, and garage.
 - `Apartment`: A class for apartments, with attributes for floor, total floors, and garage.
 
-### `coefficients.json`
+#### `coefficients.json`
 A configuration file containing:
 - `base_price`: The starting price for all properties.
 - `area_coefficient`: A multiplier for the area.
@@ -102,11 +100,9 @@ A configuration file containing:
 - `floor_coefficient`: Additional cost per floor (private houses).
 - `location_coefficients`: Location-specific multipliers.
 
----
 
-## Example Output
+### Example Output
 
-```text
 Welcome to the Bishkek House Pricing Analyzer!
 
 Enter property type (private_house/apartment): private_house
