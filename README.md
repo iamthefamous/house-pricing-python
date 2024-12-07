@@ -116,6 +116,7 @@ Available locations:
 - Orto-sai village
 - Kok jar
 - Archa Beshik
+
 ...
 Enter the location from the list above: Center
 Enter the garden area (sqm): 60
