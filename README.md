@@ -109,7 +109,9 @@ Welcome to the Bishkek House Pricing Analyzer!
 Enter property type (private_house/apartment): private_house
 
 --- Enter Private House Details ---
+
 Enter the house area (sqm): 150
+
 Available locations:
 - Center
 - Kyrgyzia 1
@@ -119,8 +121,11 @@ Available locations:
 
 ...
 Enter the location from the list above: Center
+
 Enter the garden area (sqm): 60
+
 Does it have a garage? (yes/no): yes
+
 Enter the number of floors: 2
 
 The estimated price for the private_house is: $340,000.00
