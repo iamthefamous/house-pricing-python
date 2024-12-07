@@ -1,6 +1,11 @@
 # Bishkek House Pricing Analyzer
 
 **Bishkek House Pricing Analyzer** is a Python-based program that estimates the price of a property (private house or apartment) in Bishkek based on predefined coefficients. The program uses user-provided details about the property, such as area, location, and additional features (e.g., garden, garage, etc.), to calculate an estimated price.
+By:
+Amal Kurbanov
+Alisher Dzhusuev
+Assem Minsizbayeva
+Asylbek Zhunusov
 
 ---
 
