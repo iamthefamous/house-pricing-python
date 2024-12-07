@@ -1,6 +1,11 @@
 # Bishkek House Pricing Analyzer
 
-**Bishkek House Pricing Analyzer** is a Python-based program that estimates the price of a property (private house or apartment) in Bishkek based on predefined coefficients. The program uses user-provided details about the property, such as area, location, and additional features (e.g., garden, garage, etc.), to calculate an estimated price.
+**Bishkek House Pricing Analyzer** is a Python-based program that estimates the price of a property (private house or apartment) in Bishkek based on predefined coefficients. The program uses user-provided details about the property, such as area, location, and additional features (e.g., garden, garage, etc.), to calculate an estimated price.  
+By:  
+Amal Kurbanov  
+Alisher Dzhusuev  
+Assem Minsizbayeva  
+Asylbek Zhunusov  
 
 ---
 
@@ -109,17 +114,23 @@ Welcome to the Bishkek House Pricing Analyzer!
 Enter property type (private_house/apartment): private_house
 
 --- Enter Private House Details ---
+
 Enter the house area (sqm): 150
+
 Available locations:
 - Center
 - Kyrgyzia 1
 - Orto-sai village
 - Kok jar
 - Archa Beshik
+
 ...
 Enter the location from the list above: Center
+
 Enter the garden area (sqm): 60
+
 Does it have a garage? (yes/no): yes
+
 Enter the number of floors: 2
 
 The estimated price for the private_house is: $340,000.00
